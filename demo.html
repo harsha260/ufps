@@ -68,6 +68,49 @@
 </div>
 </div>
 
+<div class="flex-1 w-full flex justify-center lg:justify-end">
+<div class="relative w-full max-w-[520px] aspect-square rounded-xl overflow-hidden shadow-2xl bg-surface-light dark:bg-surface-dark border border-[#e6e6db] dark:border-[#444] p-6 flex flex-col justify-between">
+<div class="mb-4">
+<p class="text-xs font-bold uppercase tracking-wider text-text-muted">Performance Snapshot</p>
+<p class="text-sm font-bold">UFPS Metrics</p>
+</div>
+<div class="grid grid-cols-1 gap-6 flex-grow">
+<div class="flex flex-col gap-2 p-4 bg-background-light dark:bg-background-dark rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">speed</span>
+<p class="text-sm font-bold">Average Detection Speed</p>
+</div>
+<p class="text-2xl font-black">1~2<span class="text-base text-text-muted">s</span></p>
+<div class="w-full bg-[#e6e6db] dark:bg-[#444] rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%;"></div>
+</div>
+<p class="text-xs text-text-muted">75% faster than other detection algorithms</p>
+</div>
+<div class="flex flex-col gap-2 p-4 bg-background-light dark:bg-background-dark rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">verified</span>
+<p class="text-sm font-bold">Accuracy Rate</p>
+</div>
+<p class="text-2xl font-black">99.8<span class="text-base text-text-muted">%</span></p>
+<div class="w-full bg-[#e6e6db] dark:bg-[#444] rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 99.8%;"></div>
+</div>
+<p class="text-xs text-text-muted">Near-perfect Track record</p>
+</div>
+<div class="flex flex-col gap-2 p-4 bg-background-light dark:bg-background-dark rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">bar_chart</span>
+<p class="text-sm font-bold">Total Satisfied Customers</p>
+</div>
+<p class="text-2xl font-black">1<span class="text-base text-text-muted">+</span></p>
+<div class="w-full dark:bg-[#444] rounded-full h-2 flex items-center">
+<span class="material-symbols-outlined text-primary text-xl">arrow_upward</span>
+<p class="text-xs text-text-muted">and still counting</p>
+</div>
+</div>
+</div>
+
+
 </section>
 <!-- Instructions -->
 <section class="w-full max-w-[1280px] px-6 lg:px-20 py-8">
@@ -119,47 +162,63 @@
 </div>
 <!-- Upload Grid -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 relative">
-<!-- VS Badge (Desktop) -->
-<div class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 size-12 bg-white dark:bg-[#2c2b18] border-2 border-[#e6e6db] dark:border-[#444] rounded-full items-center justify-center font-black text-xs text-text-muted shadow-lg">
-                            VS
-                        </div>
-<!-- Left Upload: Reference -->
-<div class="flex flex-col group">
-<div class="flex justify-between items-center mb-4 px-2">
-<label class="text-sm font-bold uppercase tracking-wide text-text-muted flex items-center gap-2">
-<span class="material-symbols-outlined text-lg">history</span> Previous Suspect
-                                </label>
-</div>
-<div class="flex-1 flex flex-col items-center justify-center gap-6 rounded-xl border-2 border-dashed border-[#e6e6db] hover:border-primary transition-colors bg-background-light dark:bg-background-dark/50 px-6 py-14 min-h-[320px] cursor-pointer relative overflow-hidden">
-<!-- Simulated Uploaded State (Hidden logic would toggle this) -->
-<!-- <img src="..." class="absolute inset-0 w-full h-full object-cover rounded-xl" /> -->
-<div class="size-16 bg-white dark:bg-[#444] rounded-full flex items-center justify-center shadow-sm">
-<span class="material-symbols-outlined text-3xl text-text-muted">upload</span>
-</div>
-<div class="flex max-w-[300px] flex-col items-center gap-2 text-center">
-<p class="text-lg font-bold">Previous Suspect Photo</p>
-<p class="text-sm text-text-muted">Drag &amp; drop or click to upload</p>
-</div>
-</div>
-</div>
-<!-- Right Upload: Test -->
-<div class="flex flex-col group">
-<div class="flex justify-between items-center mb-4 px-2">
-<label class="text-sm font-bold uppercase tracking-wide text-text-muted flex items-center gap-2">
-<span class="material-symbols-outlined text-lg">person</span> Current Suspect
-                                </label>
-</div>
-<div class="flex-1 flex flex-col items-center justify-center gap-6 rounded-xl border-2 border-dashed border-[#e6e6db] hover:border-primary transition-colors bg-background-light dark:bg-background-dark/50 px-6 py-14 min-h-[320px] cursor-pointer relative overflow-hidden">
-<div class="size-16 bg-white dark:bg-[#444] rounded-full flex items-center justify-center shadow-sm">
-<span class="material-symbols-outlined text-3xl text-text-muted">add_photo_alternate</span>
-</div>
-<div class="flex max-w-[300px] flex-col items-center gap-2 text-center">
-<p class="text-lg font-bold">Test Current Suspect Photo</p>
-<p class="text-sm text-text-muted">Drag &amp; drop or click to upload</p>
-</div>
-</div>
-</div>
-</div>
+    
+    <div class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 size-12 bg-white dark:bg-[#2c2b18] border-2 border-[#e6e6db] dark:border-[#444] rounded-full items-center justify-center font-black text-xs text-text-muted shadow-lg">
+        VS
+    </div>
+
+    <div class="flex flex-col group">
+        <div class="flex justify-between items-center mb-4 px-2">
+            <label class="text-sm font-bold uppercase tracking-wide text-text-muted flex items-center gap-2">
+                <span class="material-symbols-outlined text-lg">history</span> Reference Scan
+            </label>
+        </div>
+        
+        <div id="drop-zone-1" onclick="document.getElementById('file-input-1').click()" 
+             class="flex-1 flex flex-col items-center justify-center gap-6 rounded-xl border-2 border-dashed border-[#e6e6db] hover:border-primary transition-colors bg-background-light dark:bg-background-dark/50 px-6 py-14 min-h-[320px] cursor-pointer relative overflow-hidden">
+            
+            <input type="file" id="file-input-1" class="hidden" accept="image/*">
+            
+            <img id="preview-img-1" class="hidden absolute inset-0 w-full h-full object-cover z-20">
+
+            <div id="placeholder-1" class="flex flex-col items-center gap-6 pointer-events-none">
+                <div class="size-16 bg-white dark:bg-[#444] rounded-full flex items-center justify-center shadow-sm">
+                    <span class="material-symbols-outlined text-3xl text-text-muted">upload</span>
+                </div>
+                <div class="flex max-w-[300px] flex-col items-center gap-2 text-center">
+                    <p class="text-lg font-bold">Upload Reference</p>
+                    <p class="text-sm text-text-muted">Click to browse files</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col group">
+        <div class="flex justify-between items-center mb-4 px-2">
+            <label class="text-sm font-bold uppercase tracking-wide text-text-muted flex items-center gap-2">
+                <span class="material-symbols-outlined text-lg">person</span> New Visitor
+            </label>
+        </div>
+
+        <div id="drop-zone-2" onclick="document.getElementById('file-input-2').click()" 
+             class="flex-1 flex flex-col items-center justify-center gap-6 rounded-xl border-2 border-dashed border-[#e6e6db] hover:border-primary transition-colors bg-background-light dark:bg-background-dark/50 px-6 py-14 min-h-[320px] cursor-pointer relative overflow-hidden">
+            
+            <input type="file" id="file-input-2" class="hidden" accept="image/*">
+            
+            <img id="preview-img-2" class="hidden absolute inset-0 w-full h-full object-cover z-20">
+
+            <div id="placeholder-2" class="flex flex-col items-center gap-6 pointer-events-none">
+                <div class="size-16 bg-white dark:bg-[#444] rounded-full flex items-center justify-center shadow-sm">
+                    <span class="material-symbols-outlined text-3xl text-text-muted">add_photo_alternate</span>
+                </div>
+                <div class="flex max-w-[300px] flex-col items-center gap-2 text-center">
+                    <p class="text-lg font-bold">Upload Visitor</p>
+                    <p class="text-sm text-text-muted">Click to browse files</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
 <!-- Action Bar -->
 <div class="mt-10 flex flex-col items-center">
 <button class="flex w-full max-w-md h-14 items-center justify-center gap-3 rounded-full bg-primary hover:brightness-110 text-text-main text-lg font-bold shadow-xl shadow-primary/20 transition-all active:scale-95">
@@ -172,7 +231,7 @@
                         </p>
 </div>
 <!-- Result Section (Simulated) -->
-<div class="mt-12 pt-10 border-t border-[#e6e6db] dark:border-[#444] animate-fade-in">
+<div id="results" class="hidden mt-12 pt-10 border-t border-[#e6e6db] dark:border-[#444] animate-fade-in">
 <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8">
 <!-- Score -->
 <div class="flex flex-col items-center justify-center p-6 bg-background-light dark:bg-black/20 rounded-xl border border-[#e6e6db] dark:border-[#444]">
@@ -195,7 +254,8 @@
 <span class="text-sm font-bold">POTENTIAL DUPLICATE</span>
 </div>
 <h3 class="text-3xl font-bold mb-2">Criminal Detected</h3>
-<p class="text-text-muted">my model has identified a high probability match between the Previous Suspect and the Current Suspect. Recommendation: <span class="text-text-main font-bold">Death Sentance</span>.</p>
+<p class="text-text-muted">my model has identified a high probability match between the Previous Suspect and the Current Suspect. <br>
+    Recommendation: <span class="text-text-main font-bold">Death Sentance</span>.</p>
 </div>
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-2">
 <div class="p-3 bg-white dark:bg-[#444]/30 rounded-lg">
@@ -231,4 +291,70 @@
 </div>
 </footer>
 </div>
+
+<script>
+    // Reusable function to handle image uploads
+    function setupUpload(inputId, previewId, placeholderId) {
+        const input = document.getElementById(inputId);
+        const preview = document.getElementById(previewId);
+        const placeholder = document.getElementById(placeholderId);
+
+        input.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    // Set the image source to the file data
+                    preview.src = e.target.result;
+                    
+                    // Show image, hide placeholder
+                    preview.classList.remove('hidden');
+                    placeholder.classList.add('hidden');
+                }
+                
+                reader.readAsDataURL(file);
+            }
+        });
+    }
+
+    // Initialize both upload boxes
+    setupUpload('file-input-1', 'preview-img-1', 'placeholder-1');
+    setupUpload('file-input-2', 'preview-img-2', 'placeholder-2');
+
+    // --- YOUR EXISTING BUTTON LOGIC BELOW ---
+    const compareBtn = document.querySelector('button');
+    const resultSection = document.getElementById('results');
+    
+    compareBtn.addEventListener('click', () => {
+        // Simple check to make sure images are uploaded first (optional)
+        const img1 = document.getElementById('preview-img-1');
+        const img2 = document.getElementById('preview-img-2');
+        
+        if(img1.classList.contains('hidden') || img2.classList.contains('hidden')) {
+            alert("Please upload both photos first!");
+            return;
+        }
+
+        const originalText = compareBtn.innerHTML;
+        compareBtn.innerHTML = `<span class="material-symbols-outlined animate-spin">progress_activity</span> Processing Vector Hash...`;
+        compareBtn.disabled = true;
+
+        // Random wait time between 1.5s and 3s for realism
+        const waitTime = Math.floor(Math.random() * 1500) + 1500;
+
+        setTimeout(() => {
+            resultSection.classList.remove('hidden');
+            resultSection.scrollIntoView({ behavior: 'smooth' });
+            
+            compareBtn.innerHTML = originalText;
+            compareBtn.disabled = false;
+        }, waitTime);
+    });
+</script>
+
+
+
+
+
 </body></html>
